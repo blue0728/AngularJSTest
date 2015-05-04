@@ -1,0 +1,8 @@
+<div>
+    <h3 ng-bind="phones.name"></h3>
+    <img ng-src="{{mainImageUrl}}!wh200" class="phone">
+    <p ng-bind="phones.connectivity.gps | checkmark"></p>
+    <p ng-repeat="img in phones.images">
+        <label ng-bind="$index+1"></label><img ng-src="{{img}}!wh70" ng-mouseenter="setImg(img)"/>
+    </p>
+</div>

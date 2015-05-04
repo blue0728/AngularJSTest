@@ -1,0 +1,15 @@
+<div>
+
+    <input type="text" ng-model="query"/>
+    <select ng-model="orderPorp">
+        <option value="name">字母顺序</option>
+        <option value="time">时间顺序</option>
+    </select>
+    <ul>
+        <li ng-repeat="phone in phones | filter:query | orderBy:orderPorp" >
+            <p><a href="/phones/{{phone.id}}"><img ng-src="{{phone.src}}" alt="{{phone.name}}"/></a></p>
+            <p><a href="/phones/{{phone.id}}" ng-bind="phone.name"></a></p>
+            <p ng-bind="phone.snippet"></p>
+        </li>
+    </ul>
+</div>
